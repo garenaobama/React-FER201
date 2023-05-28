@@ -1,0 +1,33 @@
+.container{
+    border: 1px solid gray;
+    margin-bottom: 5px;
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu ul li{
+    display: inline-block;
+}
+
+.menu .left li{
+    padding-right: 10px;
+}
+
+.menu .right li{
+    padding-left: 10px;
+}
+
+.menu .row{
+    line-height: 30px;
+}
+
+.product-banner-title{
+    font-size: large;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+}

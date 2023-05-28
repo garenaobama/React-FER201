@@ -1,0 +1,11 @@
+.product{
+    background-color: grey;
+
+}
+
+.product img{
+    width: 100%;
+}
+.carousel-item{
+    height: 300px;
+}

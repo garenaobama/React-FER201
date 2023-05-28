@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+</head>
+<body>
+    <div id="rooto"></div>
+    <script>
+        //dung thu vien cua React tao ra 1 element tren virtual dom
+        const h1react = React.createElement(
+            "h1",
+            {className: 'tieude1', id:'Tieude1'},
+            "React goof element heading created"
+        );
+        const divElement = React.createElement(
+            "div",
+            null,
+            React.createElement(
+                "h1",
+                null,
+                "title1"
+            ),
+            React.createElement(
+                "a",
+                {href: "home.html", target:"blank"},
+                "Home"
+            )
+        );
+
+        const listElement = React.createElement(
+            "div",
+            null,
+            React.createElement(
+                "li",
+                null,
+                "Chapter 1",
+                React.createElement(
+                    "ul",
+                    {type:"square"},
+                        React.createElement(
+                        "li",
+                        null,
+                        "topic 1"
+                    ),
+                ),
+                React.createElement(
+                    "ul",
+                    {type:"square"},
+                        React.createElement(
+                        "li",
+                        null,
+                        "topic 2"
+                    ),
+                )
+            ),
+            React.createElement(
+                    "li",
+                    null,
+                    "Chapter 2"
+                )
+        );
+        //console.log(h1react);
+        //document.getElementById("root").appendChild(h1react); // dòng này sẽ lỗi , element đã tạo trên virtual dom nhưng chưa trên DOM
+        //tạo kết nối giữa vdom và dom
+        const root = ReactDOM.createRoot(document.getElementById("rooto"));
+        //root.render(h1react);
+        //root.render(divElement);
+        root.render(listElement);
+    </script>
+</body>
+</html>

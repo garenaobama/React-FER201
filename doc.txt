@@ -1,0 +1,9 @@
+1 node_modules: Chứa tất cả thư viện sử dụng trong project, bao gồm các thư viện cần thiếu tải mới cho dự án
+- public : chứa các static file người dùng có thể nhìn thấy, người dùng có thể tải về máy
+- src : chứa cá mã nguồn xử lý ( source code) logic backend, tạo ra các component trong ứng dụng
+- .gitignore : chứa các quy tắc để bỏ qua những thư mục khi upload lên git
+- package.json : file chứa thông tin cấu hình sự án , nơi khai báo các thư viện sẽ được sử dụng trong dự án , và chỉ dẫn quá trình thực thi
+- README.md: file chứa chỉ dẫn cho người dùng khi vận hành dự án
+----------Cách hoạt động của dự án -----------
+src/index.js -> gọi tới component app (JSX - javascrip xml) -> tạo ra 1 element trong Virtual dom ->
+sử dụng thư viện của ReactDOM để chuyển element từ Virtual dom sang DOM và bổ sung element vào id="root" của public/index.html
