@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const list1 = ["red","green","blue"];
+        const list2 = new Set([1,2,3,4,5]);
+        const list3 =[
+            {'id':1,'name':2, 'address':'Ha Noi'},
+            {'id':1,'name':2, 'address':'Hai Phong'},
+            {'id':1,'name':2, 'address':'Bac Giang'}
+        ];
+        const arr = ["red", "green", 'blue'];
+        for (const item of arr) {
+            console.log(item);
+        }
+        console.log("ID\tName\taddress");
+        for (const s of list3) {
+            console.log(s.id+"\t"+s.name+"\t"+s.address);
+        }
+    </script>
+</body>
+</html>

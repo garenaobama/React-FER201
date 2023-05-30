@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var
+        var x= 10;
+        if(x==10){
+            //inside
+            var x=20;
+            console.log(x);
+            console.log(window.x);
+        }
+        console.log(x);
+        //let
+        var x= 10;
+        if(x==10){
+            //inside
+            let x=20;
+            let let_a = 10;
+            console.log(x);
+            console.log(window.let_a);
+        }
+        console.log(x);
+
+        // let and var : let is block-scope variable and it will not be count as a window's attribute
+        //var is global-scope variable , and it will be a attribute of window
+    </script>
+</body>
+</html>

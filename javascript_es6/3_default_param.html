@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //default parameter
+        function sum(a=10,b=20){
+            return a+b;
+        }
+        console.log(sum());; //30
+        console.log(sum(undefined,30));//40
+        console.log(sum(40,50));
+        //default object type parameter
+        function showInfo({fname='lukau', lName='lautaro'}){
+            console.log(fname+ " " +lName);
+        }
+        showInfo({});
+        //default object type parameter with object inject
+        function showInfo({fname='lukaku', lName='lautaro'}){
+            console.log(fname+ " " +lName);
+        }
+        showInfo({BooName:"Jullian", lName:"Alvarez"}); // lukaku Alvarez
+        showInfo({fname:"Jullian", lName:"Alvarez"}); //Jullian Alvarez
+        showInfo({fname:undefined, lName:"Alvarez"}); // likaku Alvarez
+        showInfo({}); //lukaku lautaro
+
+        //default array 
+        function showColor(color=["red","green"]){
+            color.push("pink");
+            console.log(color);
+        }
+        showColor(); // red , green , pink
+        showColor([]); // pink
+    </script>
+</body>
+</html>

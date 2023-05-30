@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //rest parameter // allow passing unlimted number of parameter
+        function sum(...theArgs) {
+        let total = 0;
+        for (const arg of theArgs) {
+            total += arg;
+        }
+        return total;
+        }
+
+        console.log(sum(1, 2, 3));
+        // Expected output: 6
+        function sum2(...theArgs) {
+        let total = 0;
+        for (let i=0;i<theArgs.length;i++) {
+            total += theArgs[i];
+        }
+        return total;
+        }
+        console.log(sum2(1, 2, 3, 4));
+        // Expected output: 10
+
+        //spread 
+        let arr =[3,5,1];
+        let arr2=[8,9,15];
+        let merge =["go", ...arr , "so" ,... arr2];
+        console.log(merge);
+
+
+        //fillter duugi
+        function sumo(...list){
+            return list.filter(function(i){
+                return (typeof i ==="number");
+            }).reduce(function(pre,current){
+                return pre* current;
+            });
+        }
+        console.log(sumo(10,17,"ca",3,"guu"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [120, 'hello' , true, "word"];
+        const [a,b,c] = arr;
+        console.log([a,b,c]);
+        //object destructoring
+        const student = {fName: 'Tung', lName: 'Tieu'};
+        const {fName,lName} = student;
+        const {fName:f,lName:l} = student;
+        console.log(fName + " vs " + lName); //good
+        console.log(f + " gof " + l); //good
+
+
+        const list3 =[
+            {'id':1,'name':2, 'address':'Ha Noi'},
+            {'id':1,'name':2, 'address':'Hai Phong'},
+            {'id':1,'name':2, 'address':'Bac Giang'}
+        ];
+        const  [{id,name,address}] = list3;
+        console.log("ID\tName\taddress");
+        for (const {id,name,address} of list3) {
+            console.log(id+"\t"+name+"\t"+address);
+        }
+
+        console.log("ket hop all");
+        
+        const ShowAll = (...data) =>{
+            console.log("ID\tName\tAge");
+            for (const{id, name, address} of data) {
+                console.log(`${id}\t${name}\t${address}`);
+            }
+            //for (const {id,name,address} of data) {
+            //    console.log(id+"\t"+name+"\t"+address);
+            //}
+        };
+
+        console.log(ShowAll(...list3));
+    </script>
+</body>
+</html>
